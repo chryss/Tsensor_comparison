@@ -1,2 +1,10 @@
-micropython-sht31/*
+# editor stuff
+*.swp
+~*
+
+# outside libraries
+micropython-sht31
+
+# python stuff
 *.pyc
+.ipynb_checkpoints
