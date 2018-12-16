@@ -3,7 +3,7 @@
 ~*
 
 # outside libraries
-micropython-sht31
+# micropython-sht31
 
 # python stuff
 *.pyc
