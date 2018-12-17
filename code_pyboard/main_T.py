@@ -33,14 +33,14 @@ def p36_mV2C(mv):
 
 serial.send('DHT11_T\tDHT11_T\tP36_T\tSHT31_T\tSHT31_H')
 
-# while True:
-# 	d.measure()
-# 	p36val = p36.read()
-# 	newtemp = p36_mV2C(adc2mV(p36val))
-# 	sht31_t, sht31_h = sht31sensor.get_temp_humi()
-# 	msg = "{}\t{}\t{:.2f}\t{:.2f}\t{:.2f}".format(
-# 			d.temperature(), d.humidity(), 
-# 			newtemp, sht31_t, sht31_h)
-# 	serial.send(msg)
-# 	flashLED(num=3)
-# 	pyb.delay(interval-flashduration)
+while True:
+	d.measure()
+	p36val = p36.read()
+	newtemp = p36_mV2C(adc2mV(p36val))
+	sht31_t, sht31_h = sht31sensor.get_temp_humi()
+	msg = "{}\t{}\t{:.2f}\t{:.2f}\t{:.2f}".format(
+			d.temperature(), d.humidity(), 
+			newtemp, sht31_t, sht31_h)
+	serial.send(msg)
+	flashLED(num=3)
+	pyb.delay(interval-flashduration)
