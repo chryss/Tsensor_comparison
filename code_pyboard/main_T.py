@@ -7,7 +7,7 @@ import sht31
 
 [pyb.LED(i).off() for i in range(1, 5)]
 
-interval = 4000
+interval = 10000
 flashduration = 50
 P36pin = 'Y11'
 DHT11pin = 'X7'
